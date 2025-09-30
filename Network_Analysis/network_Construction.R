@@ -124,7 +124,7 @@ p <- ggplot(phyla_df, aes(x = reorder(Phylum, -Percentage), y = Percentage, fill
   ) +
   scale_fill_manual(values = scales::hue_pal()(length(phyla_df$Phylum)))
 # Save the plot
-ggsave("C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/Rendered/phyla_barplot.png", plot = p, width = 8, height = 6, dpi = 800, bg = "transparent")
+ggsave("../phyla_barplot.png", plot = p, width = 8, height = 6, dpi = 800, bg = "transparent")
 
 
 tropical_physeq1 <- core(tropical_physeq, detection=50, prevalence = 0.01, include.lowest = FALSE)
@@ -150,9 +150,9 @@ combined <- netConstruct(data=adj_complete,
                          sparsMethod = "none", dataType = "condDependence",
                          verbose = 3)
 
-adj_tropical <- as.matrix(read.csv("C:/Desktop/PranathiR/adj_tropical.csv", row.names = 1, check.names = FALSE))
-adj_temperate <- as.matrix(read.csv("C:/Desktop/PranathiR/adj_temperate.csv", row.names = 1, check.names = FALSE))
-adj_polar <- as.matrix(read.csv("C:/Desktop/PranathiR/adj_polar.csv", row.names = 1, check.names = FALSE))
+adj_tropical <- as.matrix(read.csv("../adj_tropical.csv", row.names = 1, check.names = FALSE))
+adj_temperate <- as.matrix(read.csv("../adj_temperate.csv", row.names = 1, check.names = FALSE))
+adj_polar <- as.matrix(read.csv("../adj_polar.csv", row.names = 1, check.names = FALSE))
 
 marine_net <- netConstruct(data=adj_marine,
                            normMethod = "none", zeroMethod = "none",
@@ -180,6 +180,7 @@ coral_sponge_net <- netConstruct(data=adj_coral_sponge,
 coral_sponge_analysis <- netAnalyze(coral_sponge_net,centrLCC = FALSE,avDissIgnoreInf = TRUE,
                                     hubPar = "degree", hubQuant = 0.95,
                                     normDeg = TRUE, normBetw = TRUE, normEigen = TRUE, verbose=2)
+
 
 
 
