@@ -10,5 +10,5 @@ Our analysis is distributed into four major parts:
 4. Explore the role of microbial communities in maintaining ecosystem stability and resilience under environmental perturbations
 
 Here we have the overview of our approach below: 
-![Description](/abstract.png)
+![Description](abstract.png)
 
