@@ -124,7 +124,7 @@ interaction_plot <- ggplot(interaction_df, aes(x = Group, y = Count, fill = Inte
   geom_bar(stat = "identity", position = "dodge", width = 0.3) +
   labs(x = "Taxa Group", y = "Number of Interactions", fill = "Interaction Type") +
   theme_minimal()
-ggsave("C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/Rendered/interaction_plot_generalists.png",
+ggsave("../interaction_plot_generalists.png",
        plot = interaction_plot, width = 6, height = 4, dpi = 800)
 
 ##========================
@@ -161,7 +161,7 @@ ggplot(phyla_combined %>% filter(log_p > 0 & Phylum != "SAR324"),
   labs(x = "Phylum", y = "-log(p)") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, face = "italic"))
-ggsave("C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/Rendered/phylum_significance_plot.jpg",
+ggsave("../phylum_significance_plot.jpg",
        width = 8, height = 6, dpi = 800)
 
 ##========================
@@ -203,7 +203,7 @@ for (i in 1:Nnodes) {
 }
 
 # Zi-Pi plot
-png("C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/Rendered/inter_intra_module_connectivity.png",
+png("../inter_intra_module_connectivity.png",
     width = 4800, height = 3600, res = 800)
 par(mar = c(5, 5, 4, 5), mgp = c(1.8, 0.5, 0))
 plot(P, Z, xlim = c(0, 1), ylim = c(-4, 4), xlab = "Among-module connectivity P", ylab = "Within-module connectivity Z",
@@ -242,3 +242,4 @@ for (idx in seq_along(removal_percentages)) {
 plot(removal_percentages, natural_connectivities, type = "b", pch = 19, col = "blue",
      xlab = "Proportion of removed nodes (%)", ylab = "Natural Connectivity",
      main = "Impact of Node Removal on Natural Connectivity")
+
