@@ -55,6 +55,7 @@ p <- ggplot(combined_df, aes(x = Climate, y = NicheWidth, fill = Climate)) +
   stat_compare_means(comparisons = pairwise_comparisons, method = "wilcox.test", label = "p.signif")
 
 ggsave(
-  "C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/Rendered/niche_width_boxplot.png",
+  "../niche_width_boxplot.png",
   plot = p, width = 8, height = 6, dpi = 800
 )
+
