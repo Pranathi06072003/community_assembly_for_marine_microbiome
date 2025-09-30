@@ -67,5 +67,6 @@ p <- ggboxplot(
 print(p)
 
 # --- Save ---
-ggsave("C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/Rendered/neutral_taxa_boxplot_marine_prev10.png",
+ggsave("../neutral_taxa_boxplot_marine_prev10.png",
        plot = p, width = 8, height = 6, dpi = 800)
+
