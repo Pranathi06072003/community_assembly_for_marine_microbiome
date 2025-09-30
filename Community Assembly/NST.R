@@ -63,14 +63,14 @@ nst_result <- tNST(
   between.group=FALSE, SES=TRUE, RC=TRUE
 )
 
-saveRDS(nst_result, "C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/RDA_Server/nst_result.rds")
-nst_result = readRDS("C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/RDA_Server/combined_N_NST.rds")
+saveRDS(nst_result, "../nst_result.rds")
+nst_result = readRDS("../combined_N_NST.rds")
 tnstbt=nst.boot(nst.result=nst_result, group=group_df, rand=500, trace=TRUE,
                 two.tail=FALSE, out.detail=TRUE, between.group=FALSE)
 
-saveRDS(tntbt, "C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/RDA_Server/tnstsbt.rds")
+saveRDS(tntbt, "../tnstsbt.rds")
 
-tnstbt <- readRDS("C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/RDA_Server/tnstsbt.rds")
+tnstbt <- readRDS("../tnstsbt.rds")
 
 nst_data <- tnstbt$summary[tnstbt$summary$Index == "NST", ]
 ggplot(nst_data, aes(x = Group, ymin = LowerWhisker, lower = LowerHinge, 
@@ -79,3 +79,4 @@ ggplot(nst_data, aes(x = Group, ymin = LowerWhisker, lower = LowerHinge,
   labs(title = "NST Boxplot for Polar, Temperate, and Tropical",
        y = "Value", x = "Climate Zone") +
   theme_minimal()
+
