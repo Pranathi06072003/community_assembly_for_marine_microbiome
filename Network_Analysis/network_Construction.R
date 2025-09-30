@@ -8,26 +8,6 @@ library(plyr)
 library(dplyr)
 library(gridExtra)
 library(grid)
-library(igraph)
-library(intergraph)
-library(GGally)
-library(network)
-library(intergraph)
-library(RColorBrewer)
-library(dplyr)
-library(microbiome)
-library(NetCoMi)
-
-library(SpiecEasi)
-library(devtools)
-library(igraph)
-library(vegan)
-library(Matrix)
-library(reshape2)
-library(plyr)
-library(dplyr)
-library(gridExtra)
-library(grid)
 library(future)
 library(future.apply)
 library(igraph)
@@ -200,5 +180,6 @@ coral_sponge_net <- netConstruct(data=adj_coral_sponge,
 coral_sponge_analysis <- netAnalyze(coral_sponge_net,centrLCC = FALSE,avDissIgnoreInf = TRUE,
                                     hubPar = "degree", hubQuant = 0.95,
                                     normDeg = TRUE, normBetw = TRUE, normEigen = TRUE, verbose=2)
+
 
 
