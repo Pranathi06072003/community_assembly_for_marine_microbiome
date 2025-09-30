@@ -12,4 +12,5 @@ Our analysis is distributed into four major parts:
 Here we have the overview of our approach below: 
 ![Abstract Figure](Abstract.png)
 
-
+## Cite: 
+Ravikumar, Pranathi, Aarti Ravindran, and Karthik Raman. "Deciphering Global Patterns of Marine Microbial Community Assembly and Network Stability." bioRxiv (2025): 2025-09 DOI: https://doi.org/10.1101/2025.09.19.677047
