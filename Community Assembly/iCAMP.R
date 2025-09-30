@@ -50,12 +50,12 @@ treat <- env_df[, "sample_origin_code", drop = FALSE]
 if (taxa_are_rows(complete_data1)) {
   otu_table <- t(otu_table)
 }
-write.csv(otu_table, file = "C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/otu_table_icamp.csv", quote = FALSE)
-write.csv(tax_table, file = "C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/tax_table_icamp.csv", quote = FALSE)
-write.tree(phy_tree, file = "C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/phylogenetic_tree_icamp.nwk")
-write.csv(env_df, file = "C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/env_table_icamp.csv", quote = FALSE)
+write.csv(otu_table, file = "../otu_table_icamp.csv", quote = FALSE)
+write.csv(tax_table, file = "../tax_table_icamp.csv", quote = FALSE)
+write.tree(phy_tree, file = "../phylogenetic_tree_icamp.nwk")
+write.csv(env_df, file = "../env_table_icamp.csv", quote = FALSE)
 
-save.wd="C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/wd_icamp8"
+save.wd="../wd_icamp8"
 if(!dir.exists(save.wd)){dir.create(save.wd)}
 
 rand.time=100  # randomization time, 1000 is usually enough. For example test, you may set as 100 or less to save time.
@@ -66,7 +66,7 @@ memory.G=16 # to set the memory size as you need (but should be less than the av
 library(iCAMP)
 library(ape)
 
-comm <- read.table("C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/otu_table_icamp.csv",
+comm <- read.table("../otu_table_icamp.csv",
                    header = TRUE,
                    sep = ",",
                    row.names = 1,
@@ -74,13 +74,13 @@ comm <- read.table("C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA
                    stringsAsFactors = FALSE,
                    comment.char = "",
                    check.names = FALSE)
-tree=read.tree(file = "C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/phylogenetic_tree_icamp.nwk")
+tree=read.tree(file = "../phylogenetic_tree_icamp.nwk")
 
-clas <- read.table("C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/tax_table_icamp.csv", header = TRUE, sep = ",", row.names = 1,
+clas <- read.table("../tax_table_icamp.csv", header = TRUE, sep = ",", row.names = 1,
                    as.is = TRUE, stringsAsFactors = FALSE, comment.char = "",
                    check.names = FALSE)
 
-env <- read.table("C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/env_table_icamp.csv", header = TRUE, sep = ",", row.names = 1,
+env <- read.table("../env_table_icamp.csv", header = TRUE, sep = ",", row.names = 1,
                   stringsAsFactors = FALSE, comment.char = "",
                   check.names = FALSE)
 
@@ -241,5 +241,6 @@ ggplot(process_df, aes(ymax = ymax, ymin = ymin, xmax = 4, xmin = 3, fill = Proc
   )
 
 # Save the plot
-ggsave("C:/Desktop/PranathiR/IITM/ComputationalSystemsBiologyLab/QZA_Results/temperate_icamp.png",
+ggsave("../temperate_icamp.png",
        width = 10, height = 6, dpi = 800)
+
