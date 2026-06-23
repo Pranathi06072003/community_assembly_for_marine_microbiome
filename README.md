@@ -13,4 +13,4 @@ Here we have the overview of our approach below:
 ![Abstract Figure](Abstract.png)
 
 ## Cite: 
-Ravikumar, Pranathi, Aarti Ravindran, and Karthik Raman. "Deciphering Global Patterns of Marine Microbial Community Assembly and Network Stability." bioRxiv (2025): 2025-09 DOI: https://doi.org/10.1101/2025.09.19.677047
+Ravikumar P, Ravindran A, Raman K.0. Deciphering global patterns of marine microbial community assembly and network stability. mSystems0:e00470-26. https://doi.org/10.1128/msystems.00470-26
